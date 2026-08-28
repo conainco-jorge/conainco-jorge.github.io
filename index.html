@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -163,7 +163,6 @@
     padding: 3rem;
   }
 
-  /* Decorative geometric pattern instead of photo */
   .hero-geo {
     position: absolute; inset: 0;
     overflow: hidden;
@@ -247,7 +246,6 @@
     position: relative; z-index: 2;
   }
 
-  .stat { }
   .stat-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.6rem;
@@ -357,10 +355,7 @@
   .vis-block:hover { box-shadow: 0 8px 30px rgba(13,32,64,0.1); }
   .vis-block:first-child { grid-row: span 2; background: var(--navy); }
 
-  .vis-block-icon {
-    font-size: 2rem;
-    opacity: 0.7;
-  }
+  .vis-block-icon { font-size: 2rem; opacity: 0.7; }
 
   .vis-block-label {
     font-family: 'Outfit', sans-serif;
@@ -379,9 +374,9 @@
     font-size: 3.5rem;
     font-weight: 300;
     line-height: 1;
+    color: var(--navy);
   }
   .vis-block:first-child .vis-block-num { color: var(--white); }
-  .vis-block-num { color: var(--navy); }
 
   .vis-block::before {
     content: '';
@@ -445,9 +440,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .servicio-icon {
-    font-size: 1.6rem; margin-bottom: 1rem;
-  }
+  .servicio-icon { font-size: 1.6rem; margin-bottom: 1rem; }
 
   .servicio-card h3 {
     font-family: 'Cormorant Garamond', serif;
@@ -497,39 +490,10 @@
   .proyecto-item:nth-child(3) { grid-column: span 4; }
   .proyecto-item:nth-child(4) { grid-column: span 3; }
 
-  .proyecto-decor {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0.25;
-    transition: opacity 0.3s;
-  }
-
-  .proyecto-item:hover .proyecto-decor { opacity: 0.4; }
-
-  .proyecto-decor-inner {
-    width: 60%; height: 60%;
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 50%;
-    position: relative;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  .proyecto-decor-inner::before {
-    content: '';
-    position: absolute;
-    width: 60%; height: 60%;
-    border: 1px solid rgba(74,125,181,0.4);
-    border-radius: 50%;
-  }
-
-  .proyecto-decor-icon {
-    font-size: 2.5rem;
-    position: relative; z-index: 1;
-  }
-
   .proyecto-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(to top, rgba(13,32,64,0.95) 0%, transparent 60%);
+    z-index: 1;
   }
 
   .proyecto-info {
@@ -618,7 +582,7 @@
     color: var(--text-muted);
   }
 
-  /* ── DIFERENCIADORES (nueva sección) ── */
+  /* ── DIFERENCIADORES ── */
   #diferenciadores {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
     text-align: center;
@@ -715,7 +679,6 @@
   .contact-detail-text a:hover { color: var(--navy); }
 
   .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 
   .form-group label {
@@ -747,7 +710,6 @@
   }
 
   .form-group select option { background: var(--cream); }
-
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
   /* ── FOOTER ── */
@@ -764,28 +726,13 @@
     color: var(--white); font-weight: 400;
   }
 
-  .footer-copy {
-    font-size: 0.72rem; color: rgba(255,255,255,0.35);
-  }
-
+  .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.35); }
   .footer-tagline {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 0.95rem;
     color: rgba(255,255,255,0.45);
   }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .animate { animation: fadeUp 0.75s ease both; }
-  .delay-1 { animation-delay: 0.1s; }
-  .delay-2 { animation-delay: 0.25s; }
-  .delay-3 { animation-delay: 0.42s; }
-  .delay-4 { animation-delay: 0.58s; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -802,8 +749,7 @@
     .proceso-steps::before { display: none; }
     .proyectos-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
     .proyecto-item { grid-column: span 1 !important; height: 16rem; }
-    .servicios-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .proyectos-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .servicios-header, .proyectos-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .dif-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
     .form-row { grid-template-columns: 1fr; }
@@ -827,14 +773,14 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-tag animate delay-1">Más de 30 años de experiencia</p>
-    <h1 class="hero-title animate delay-2">
+    <p class="hero-tag">Más de 30 años de experiencia</p>
+    <h1 class="hero-title">
       Espacios que<br><em>inspiran</em><br>y perduran.
     </h1>
-    <p class="hero-desc animate delay-3">
+    <p class="hero-desc">
       Empresa guatemalteca especializada en acabados de alta calidad, remodelaciones y proyectos de construcción integral. Transformamos espacios con visión, precisión y elegancia.
     </p>
-    <div class="hero-cta-group animate delay-4">
+    <div class="hero-cta-group">
       <a href="#contacto" class="btn-primary">Solicitar Cotización</a>
       <a href="#proyectos" class="btn-ghost">Ver Proyectos</a>
     </div>
@@ -975,37 +921,24 @@
   </div>
   <div class="proyectos-grid">
     <div class="proyecto-item">
-      <div class="proyecto-decor">
-        <div class="proyecto-decor-inner">
-          <span class="proyecto-decor-icon">🏢</span>
-        </div>
-      </div>
+      <img src="OFICINA RONY/WhatsApp Image 2026-06-24 at 20.05.57.jpeg" alt="Oficina Rony" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
-        <p class="proyecto-cat">Bodega Comercial · Villanueva</p>
-        <h3>Proyecto Villanueva</h3>
-        <span class="proyecto-tag">Acabados Industriales</span>
+        <p class="proyecto-cat">Oficinas Llave en Mano</p>
+        <h3>Oficinas</h3>
+        <span class="proyecto-tag">Acabados Finos</span>
       </div>
     </div>
     <div class="proyecto-item">
-      <div class="proyecto-decor">
-        <div class="proyecto-decor-inner">
-          <span class="proyecto-decor-icon">🏬</span>
-        </div>
-      </div>
+      <img src="REMODELACIÒN DE COCINAS/WhatsApp Image 2026-06-24 at 20.07.59.jpeg" alt="Remodelación Cocina" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
-        <p class="proyecto-cat">Local Comercial · Zona 10</p>
-        <h3>Bodega Zona 10</h3>
-        <span class="proyecto-tag">Remodelación</span>
+        <p class="proyecto-cat">Residencial · Remodelación</p>
+        <h3>Remodelación de Cocinas</h3>
+        <span class="proyecto-tag">Diseño de Interiores</span>
       </div>
     </div>
     <div class="proyecto-item">
-      <div class="proyecto-decor">
-        <div class="proyecto-decor-inner">
-          <span class="proyecto-decor-icon">🔧</span>
-        </div>
-      </div>
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
         <p class="proyecto-cat">Mantenimiento · Petapa</p>
@@ -1014,11 +947,6 @@
       </div>
     </div>
     <div class="proyecto-item">
-      <div class="proyecto-decor">
-        <div class="proyecto-decor-inner">
-          <span class="proyecto-decor-icon">🏥</span>
-        </div>
-      </div>
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
         <p class="proyecto-cat">Clínicas · Zona 11</p>
@@ -1096,17 +1024,17 @@
         <span>Jorge Fernando Chavez Samayoa</span>
       </div>
     </div>
- <div class="contact-detail">
-  <span class="contact-icon">📞</span>
-  <div class="contact-detail-text">
-    <label>Teléfono</label>
-    <a href="tel:+50259004194">+502 5900-4194</a>
-    <a href="https://wa.me/50259004194" target="_blank" rel="noopener noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="18" height="18" style="vertical-align: middle; margin-right: 4px;" />
-      WhatsApp
-    </a>
-  </div>
-</div>
+    <div class="contact-detail">
+      <span class="contact-icon">📞</span>
+      <div class="contact-detail-text">
+        <label>Teléfono</label>
+        <a href="tel:+50259004194">+502 5900-4194</a>
+        <a href="https://wa.me/50259004194" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="18" height="18" style="vertical-align: middle; margin-right: 4px;" />
+          WhatsApp
+        </a>
+      </div>
+    </div>
     <div class="contact-detail">
       <span class="contact-icon">✉️</span>
       <div class="contact-detail-text">
