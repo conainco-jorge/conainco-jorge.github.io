@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -468,13 +468,13 @@
 
   .proyectos-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 20rem 20rem;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 
   .proyecto-item {
     position: relative; overflow: hidden;
+    height: 25rem;
     border-radius: 4px;
     display: flex; align-items: flex-end;
     cursor: default;
@@ -484,11 +484,6 @@
   }
 
   .proyecto-item:hover { border-color: rgba(74,125,181,0.4); }
-
-  .proyecto-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
-  .proyecto-item:nth-child(2) { grid-column: span 7; }
-  .proyecto-item:nth-child(3) { grid-column: span 4; }
-  .proyecto-item:nth-child(4) { grid-column: span 3; }
 
   .proyecto-overlay {
     position: absolute; inset: 0;
@@ -509,7 +504,7 @@
 
   .proyecto-info h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--white);
   }
@@ -748,7 +743,7 @@
     .proceso-steps { grid-template-columns: 1fr 1fr; row-gap: 3rem; }
     .proceso-steps::before { display: none; }
     .proyectos-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-    .proyecto-item { grid-column: span 1 !important; height: 16rem; }
+    .proyecto-item { height: 16rem; }
     .servicios-header, .proyectos-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .dif-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
@@ -920,8 +915,10 @@
     <a href="#contacto" class="btn-ghost" style="border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.8)">Hablemos de su proyecto →</a>
   </div>
   <div class="proyectos-grid">
+
+    <!-- 1. OFICINAS -->
     <div class="proyecto-item">
-      <img src="OFICINA RONY/WhatsApp Image 2026-06-24 at 20.05.57.jpeg" alt="Oficina Rony" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
+      <img src="OFICINA RONY/WhatsApp Image 2026-06-24 at 20.05.57.jpeg" alt="Oficinas" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
         <p class="proyecto-cat">Oficinas Llave en Mano</p>
@@ -929,8 +926,10 @@
         <span class="proyecto-tag">Acabados Finos</span>
       </div>
     </div>
+
+    <!-- 2. REMODELACIÓN DE COCINAS -->
     <div class="proyecto-item">
-      <img src="REMODELACIÒN DE COCINAS/WhatsApp Image 2026-06-24 at 20.07.59.jpeg" alt="Remodelación Cocina" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
+      <img src="REMODELACIÒN DE COCINAS/WhatsApp Image 2026-06-24 at 20.07.59.jpeg" alt="Remodelación de Cocinas" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
         <p class="proyecto-cat">Residencial · Remodelación</p>
@@ -938,22 +937,18 @@
         <span class="proyecto-tag">Diseño de Interiores</span>
       </div>
     </div>
+
+    <!-- 3. CONSTRUCCIÓN CASA Y PLANTA -->
     <div class="proyecto-item">
+      <img src="CONSTRUCCIÒN CASA Z. 10 _ PLANTA_VILLA.../WhatsApp Image 2026-06-24 at 20.05.57.jpeg" alt="Construcción Casa y Planta" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
       <div class="proyecto-overlay"></div>
       <div class="proyecto-info">
-        <p class="proyecto-cat">Mantenimiento · Petapa</p>
-        <h3>Remozamiento Bodega Petapa</h3>
-        <span class="proyecto-tag">Estructuras & Cubiertas</span>
+        <p class="proyecto-cat">Residencial · Construcción</p>
+        <h3>Construcción Casa y Planta</h3>
+        <span class="proyecto-tag">Construcción Integral</span>
       </div>
     </div>
-    <div class="proyecto-item">
-      <div class="proyecto-overlay"></div>
-      <div class="proyecto-info">
-        <p class="proyecto-cat">Clínicas · Zona 11</p>
-        <h3>Clínicas y Consultorios</h3>
-        <span class="proyecto-tag">Acabados Finos</span>
-      </div>
-    </div>
+
   </div>
 </section>
 
